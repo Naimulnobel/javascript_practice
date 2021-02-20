@@ -1,6 +1,6 @@
 const account={
     name:"nobel",
-    ammount:[],
+    amount:[],
     expense:[],
     addExpense:function(description,amount){
         this.expense.push({
@@ -8,8 +8,8 @@ const account={
             amount:amount,
     })
     },
-    addAmmount:function(description,amount){
-        this.ammount.push({
+    addAmount:function(description,amount){
+        this.amount.push({
             description:description,
             amount:amount,
     })
@@ -21,7 +21,7 @@ const account={
             totalExpenseAmount=totalExpenseAmount+expanse.amount
 
         })
-        this.ammount.forEach(function(amount){
+        this.amount.forEach(function(amount){
             totalEarnAmount=totalEarnAmount+amount.amount
 
         })
@@ -30,6 +30,6 @@ const account={
 }
 account.addExpense("rent",100)
 account.addExpense("ammount",100)
-account.addAmmount("salery",100)
-account.addAmmount("ammount",100)
+account.addAmount("salery",100)
+account.addAmount("ammount",100)
 account.getAccountSummary()
